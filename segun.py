@@ -43,7 +43,7 @@ def put_cambioElemento(listId, listEntryId, elementId, elementChange):
 ###################################################
 #### Inicio del programa
 ###################################################
-
+# Mis cosas: 218913
 
 account_info = get_account_info()
 ws = get_ws()
@@ -66,3 +66,4 @@ else:
     exit()
 
 print(ws[0]["lists"][0]["settings"]["calendarSync"]["calendarName"])
+put_cambioElemento(218913, listEntryId, elementId, elementChange)

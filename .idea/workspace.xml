@@ -41,6 +41,9 @@
       <module name="SegungoPy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -102,14 +105,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="127" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576581662549" />
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576571587416">
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576606169073">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576571587416" />
-    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576574364134">
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576606169073" />
+    <state x="351" y="7" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576583156383">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1576574364134" />
+    <state x="351" y="7" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1576583156383" />
     <state x="347" y="170" key="run.anything.popup" timestamp="1576524306733">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
