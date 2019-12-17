@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="" />
+    <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/segun.py" beforeDir="false" afterPath="$PROJECT_DIR$/segun.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +30,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="/tmp/prueba.json" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="segun" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -82,21 +86,37 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="282" y="47" key="#Code_Folding/0.0.1366.768@0.0.1366.768" timestamp="1576520236411" />
+    <state x="282" y="43" width="802" height="725" key="#Intentions" timestamp="1576577419296">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="282" y="43" width="802" height="725" key="#Intentions/0.0.1366.768@0.0.1366.768" timestamp="1576577419296" />
+    <state x="470" y="143" key="FileChooserDialogImpl" timestamp="1576577238163">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="470" y="143" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1576577238163" />
     <state x="270" y="131" key="IDE.errors.dialog" timestamp="1576517125167">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="270" y="131" key="IDE.errors.dialog/0.0.1366.768@0.0.1366.768" timestamp="1576517125167" />
-    <state x="127" y="41" key="SettingsEditor" timestamp="1576521881443">
+    <state x="127" y="41" key="SettingsEditor" timestamp="1576581662549">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="127" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576521881443" />
-    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576521297546">
+    <state x="127" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576581662549" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576571587416">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1576521297546" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576571587416" />
+    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576574364134">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="351" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1576574364134" />
     <state x="347" y="170" key="run.anything.popup" timestamp="1576524306733">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="347" y="170" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1576524306733" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1576576906087">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1576576906087" />
   </component>
 </project>
