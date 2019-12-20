@@ -35,6 +35,7 @@ def jsonAFichero(df):
 
 
 def putCambioEstado(listId, listEntryId, elementId, uuidElementId, nuevoValor):
+
     url = urlbase + "lists/" + listId + "/entries/" + listEntryId + "/elements/" + elementId
     payload = '{\n\t    \"' + uuidElementId + '_categories\": \"' + nuevoValor + '\"\n}\n'
 
@@ -45,7 +46,6 @@ def putCambioEstado(listId, listEntryId, elementId, uuidElementId, nuevoValor):
         return None
 
 def postFiltroPorFecha(listShortId, elementId,fecha, groupby):
-
     url = urlbase + "lists/" + listShortId + "/entries/filter/list"
 
     datos_post = '{ \
@@ -65,21 +65,16 @@ def postFiltroPorFecha(listShortId, elementId,fecha, groupby):
                    }},     \
                "groupByElementId": '
     datos_post += groupby + ',    \
-               "exclude": [1190207,1190208],   \
+               "exclude": [1190201,1190207,1190208],   \
                "allowDeprecated": false,       \
                "taskStyle": false,             \
                "skip": 0                      }'
 
     response = requests.post(url, data =datos_post, headers=cabecera)
-
-    print (datos_post)
-    return json.loads(response.content.decode('utf-8'))
-
     if response.status_code == 200:
         return json.loads(response.content.decode('utf-8'))
     else:
         return None
-
 
 ###################################################
 #### Inicio del programa
@@ -93,15 +88,15 @@ EstadoId = "2260111"        # Agrupado por Estado Original
 uuidEstado = "2c4f48c2-1567-4991-8289-9552d5a2b81f"  # UUid Del Estado Original
 estadoHoy = "1190201" # Estado por el que se cambia (Hoy)
 
+# Calcula el día de mañana
 hoy = date.today()  # Asigna fecha actual
 mañana = hoy + timedelta(days=1)
 strMañana = str(mañana)
-print(mañana)  # "2019-12-20T12:00:00.000Z"
 
 # Busco entradas con fecha anterior de mañana y que no esten Hecho o Cancelado o Archivado
 jsonFiltro = postFiltroPorFecha(listShortId, elementId, strMañana, EstadoId)
-if jsonFiltro is None:
-    print('Error en Filtro')
+if jsonFiltro is  None:
+    print('Error en Filtro: ', jsonFiltro)
     exit
 
 #Itero por las entradas encontradas y cambio su estado a Hoy
@@ -113,4 +108,5 @@ while iterador < elementos:
     if retPut is None:
         print('Error en Cambio de estado: '+ elementId)
         exit
+    print (jsonFiltro["listEntries"][iterador]['displayString'])
     iterador += 1

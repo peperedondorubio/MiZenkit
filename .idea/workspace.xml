@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/segun.py" beforeDir="false" afterPath="$PROJECT_DIR$/segun.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,10 +138,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="127" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576831110947" />
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576829842185">
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1576865320811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576829842185" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576865320808" />
     <state x="351" y="7" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576583156383">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
