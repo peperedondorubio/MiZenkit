@@ -111,6 +111,6 @@ while iterador < elementos:
     elementId = str(jsonFiltro["listEntries"][iterador]['id'])
     retPut = putCambioEstado(listId,elementId,EstadoId,uuidEstado,estadoHoy)
     if retPut is None:
-        print('Error en Cambio de estado')
+        print('Error en Cambio de estado: '+ elementId)
         exit
     iterador += 1
