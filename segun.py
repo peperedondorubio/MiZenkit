@@ -1,5 +1,6 @@
 import requests
 import json
+from datetime import date, timedelta
 
 urlbase = 'https://zenkit.com/api/v1/'
 cabecera = {'Content-Type': 'application/json',
@@ -24,6 +25,7 @@ def get_ws():
     else:
         return None
 
+
 def jsonAFichero(df):
     fichero = "/tmp/prueba.json"
 
@@ -31,39 +33,84 @@ def jsonAFichero(df):
         json.dump(df, file)
         file.close()
 
-def put_cambioElemento(listId, listEntryId, elementId, elementChange):
-    url = urlbase + "/api/v1/lists/" + listId + "/entries/" + listEntryId + "/elements/" + elementId
-    response = requests.put(url, headers=cabecera, params=elementChange)
+
+def putCambioEstado(listId, listEntryId, elementId, uuidElementId, nuevoValor):
+    url = urlbase + "lists/" + listId + "/entries/" + listEntryId + "/elements/" + elementId
+    payload = '{\n\t    \"' + uuidElementId + '_categories\": \"' + nuevoValor + '\"\n}\n'
+
+    response = requests.put( url, data=payload, headers=cabecera)
+    if response.status_code == 200:
+        return json.loads(response.content.decode('utf-8'))
+    else:
+        return None
+
+def postFiltroPorFecha(listShortId, elementId,fecha, groupby):
+
+    url = urlbase + "lists/" + listShortId + "/entries/filter/list"
+
+    datos_post = '{ \
+               "filter": {  \
+                   "AND": {   \
+                       "TERMS": [{  \
+                           "elementId":'
+    datos_post += elementId + ',   \
+                           "modus": "contains",    \
+                           "negated": false,      \
+                           "dateType": 10,        \
+                           "dateFrom": null,      \
+                           "dateTo": "'
+    datos_post += fecha + '"   \
+                       }   \
+                       ]   \
+                   }},     \
+               "groupByElementId": '
+    datos_post += groupby + ',    \
+               "exclude": [1190207,1190208],   \
+               "allowDeprecated": false,       \
+               "taskStyle": false,             \
+               "skip": 0                      }'
+
+    response = requests.post(url, data =datos_post, headers=cabecera)
+
+    print (datos_post)
+    return json.loads(response.content.decode('utf-8'))
 
     if response.status_code == 200:
         return json.loads(response.content.decode('utf-8'))
     else:
         return None
 
+
 ###################################################
 #### Inicio del programa
 ###################################################
-# Mis cosas: 218913
 
-account_info = get_account_info()
-ws = get_ws()
-jsonAFichero(ws)
+# Valores estáticos
+listShortId = "H1bSOMA9f"   # Lista de Mis Cosas
+listId =  "218913"          # Lista de Mis Cosas
+elementId = "2260113"        # Identificador de Fecha de Vencimiento
+EstadoId = "2260111"        # Agrupado por Estado Original
+uuidEstado = "2c4f48c2-1567-4991-8289-9552d5a2b81f"  # UUid Del Estado Original
+estadoHoy = "1190201" # Estado por el que se cambia (Hoy)
 
-if account_info is not None:
-    print("En linea: ")
-    # for k, v in account_info.items():
-    #    print('{0}:{1}'.format(k, v))
-else:
-    print('[!] Error1')
+hoy = date.today()  # Asigna fecha actual
+mañana = hoy + timedelta(days=1)
+strMañana = str(mañana)
+print(mañana)  # "2019-12-20T12:00:00.000Z"
+
+# Busco entradas con fecha anterior de mañana y que no esten Hecho o Cancelado o Archivado
+jsonFiltro = postFiltroPorFecha(listShortId, elementId, strMañana, EstadoId)
+if jsonFiltro is None:
+    print('Error en Filtro')
     exit
 
-if ws is not None:
-    for k, v in ws[0]["lists"][0]["settings"]["calendarSync"].items():
-        print('{0}:{1}'.format(k, v))
-
-else:
-    print('[!] Error2')
-    exit()
-
-print(ws[0]["lists"][0]["settings"]["calendarSync"]["calendarName"])
-put_cambioElemento(218913, listEntryId, elementId, elementChange)
+#Itero por las entradas encontradas y cambio su estado a Hoy
+elementos = int(jsonFiltro['countData']['filteredTotal'])
+iterador = 0
+while iterador < elementos:
+    elementId = str(jsonFiltro["listEntries"][iterador]['id'])
+    retPut = putCambioEstado(listId,elementId,EstadoId,uuidEstado,estadoHoy)
+    if retPut is None:
+        print('Error en Cambio de estado')
+        exit
+    iterador += 1
