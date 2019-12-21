@@ -1,11 +1,13 @@
 import requests
 import json
+import argparse
 from datetime import datetime, date, timedelta
 
-version = "1.0"
+version = "1.1"
 urlbase = 'https://zenkit.com/api/v1/'
 cabecera = {'Content-Type': 'application/json',
             'Zenkit-API-Key': 'jffaf7ne-X1ELSpJZLdRlE5uAWIbWC47rJlna51h2'}
+
 
 def get_account_info():
     url = urlbase + "auth/currentuser"
@@ -49,6 +51,8 @@ def putCambioEstado(listId, listEntryId, elementId, uuidElementId, nuevoValor):
 def postFiltroPorFecha(listShortId, elementId, fecha, groupby):
     url = urlbase + "lists/" + listShortId + "/entries/filter/list"
 
+    # Excluyo estados: hoy, hecho y cancelado (exclude)
+
     datos_post = '{ \
                "filter": {  \
                    "AND": {   \
@@ -78,6 +82,23 @@ def postFiltroPorFecha(listShortId, elementId, fecha, groupby):
         return None
 
 
+def argumentosEntrada():
+    prev = 1
+    verbose = bool(0)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", "--verbose", help="Más log", action="store_true")
+    parser.add_argument("-p", "--previo", help="Dias previos para cambio de estado")
+    args = parser.parse_args()
+
+    if args.previo:
+        prev = int(args.previo)
+
+    if args.verbose:
+        verbose = bool(1)
+
+    return [prev, verbose]
+
+
 ###################################################
 #### Inicio del programa
 ###################################################
@@ -90,9 +111,14 @@ EstadoId = "2260111"  # Agrupado por Estado Original
 uuidEstado = "2c4f48c2-1567-4991-8289-9552d5a2b81f"  # UUid Del Estado Original
 estadoHoy = "1190201"  # Estado por el que se cambia (Hoy)
 
+# Lista de parametros de entrada. Devuelve numero de dias previos de cambio de estado (opción -p)
+[previos, verbose] = argumentosEntrada()
+if previos == 0:
+    exit(1)  # No debería pasar
+
 # Calcula el día de mañana
 hoy = date.today()  # Asigna fecha actual
-mañana = hoy + timedelta(days=1)
+mañana = hoy + timedelta(days=previos)
 strMañana = str(mañana)
 print("segun.py -->  Versión" + version)
 print("Fecha: " + str(datetime.now()))
@@ -101,7 +127,7 @@ print("Fecha: " + str(datetime.now()))
 jsonFiltro = postFiltroPorFecha(listShortId, elementId, strMañana, EstadoId)
 if jsonFiltro is None:
     print('Error en Filtro: ', jsonFiltro)
-    exit
+    exit(1)
 
 # Itero por las entradas encontradas y cambio su estado a Hoy
 elementos = int(jsonFiltro['countData']['filteredTotal'])
@@ -111,8 +137,9 @@ while iterador < elementos:
     retPut = putCambioEstado(listId, elementId, EstadoId, uuidEstado, estadoHoy)
     if retPut is None:
         print('Error en Cambio de estado: ' + elementId)
-        exit
-    print(jsonFiltro["listEntries"][iterador]['displayString'])
+        exit(1)
+    print("--> " + jsonFiltro["listEntries"][iterador]['displayString'])
     iterador += 1
 
 print()  # Un espacio al final
+exit(0)
