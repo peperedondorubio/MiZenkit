@@ -1,0 +1,11 @@
+- hosts: Servidores
+
+  become: true
+
+  tasks:
+
+   - name: Instalación del archivo segun.py en el servidor
+     template:  
+       src: ~/Desarrollo/SegungoPy/segun.py
+       dest: /usr/local/bin/
+       mode: '0755'
