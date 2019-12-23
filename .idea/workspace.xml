@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreaZk.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreaZk.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,28 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.scratch">
+  <component name="RunManager" selected="Python.CreaZk">
+    <configuration name="CreaZk" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SegungoPy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CreaZk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SegungoPy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CreaZk" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.segun" />
       </list>
@@ -128,26 +151,26 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="470" y="143" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1576577238163" />
-    <state width="1292" height="157" key="GridCell.Tab.0.bottom" timestamp="1577014928189">
+    <state width="1292" height="157" key="GridCell.Tab.0.bottom" timestamp="1577018509757">
       <screen x="28" y="0" width="1338" height="768" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1576839000297" />
-    <state width="1292" height="157" key="GridCell.Tab.0.bottom/28.0.1338.768@28.0.1338.768" timestamp="1577014928189" />
-    <state width="1292" height="157" key="GridCell.Tab.0.center" timestamp="1577014928189">
+    <state width="1292" height="157" key="GridCell.Tab.0.bottom/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
+    <state width="1292" height="157" key="GridCell.Tab.0.center" timestamp="1577018509757">
       <screen x="28" y="0" width="1338" height="768" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1576839000296" />
-    <state width="1292" height="157" key="GridCell.Tab.0.center/28.0.1338.768@28.0.1338.768" timestamp="1577014928189" />
-    <state width="1292" height="157" key="GridCell.Tab.0.left" timestamp="1577014928188">
+    <state width="1292" height="157" key="GridCell.Tab.0.center/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
+    <state width="1292" height="157" key="GridCell.Tab.0.left" timestamp="1577018509757">
       <screen x="28" y="0" width="1338" height="768" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1576839000296" />
-    <state width="1292" height="157" key="GridCell.Tab.0.left/28.0.1338.768@28.0.1338.768" timestamp="1577014928188" />
-    <state width="1292" height="157" key="GridCell.Tab.0.right" timestamp="1577014928189">
+    <state width="1292" height="157" key="GridCell.Tab.0.left/28.0.1338.768@28.0.1338.768" timestamp="1577018509756" />
+    <state width="1292" height="157" key="GridCell.Tab.0.right" timestamp="1577018509757">
       <screen x="28" y="0" width="1338" height="768" />
     </state>
     <state width="1320" height="219" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1576839000297" />
-    <state width="1292" height="157" key="GridCell.Tab.0.right/28.0.1338.768@28.0.1338.768" timestamp="1577014928189" />
+    <state width="1292" height="157" key="GridCell.Tab.0.right/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
     <state width="1320" height="219" key="GridCell.Tab.1.bottom" timestamp="1576839000298">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
