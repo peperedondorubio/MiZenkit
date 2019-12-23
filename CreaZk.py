@@ -16,8 +16,10 @@ nuevoTemita = "7fba08c0-5c02-4c73-a373-8609ffb2aea5_text" # uuid Texto de la tar
 def crearTareaMiLista(listShortId, argumentos):
     url = urlbase + "lists/" + listShortId + "/entries"
 
-    vencimiento=""
+    if len(argumentos) == 1:
+        return None   # Sin argumentos
 
+    vencimiento=""
     textoTarea=argumentos[1]
 
     payload = '{  "sortOrder": "lowest",  "'
@@ -26,8 +28,6 @@ def crearTareaMiLista(listShortId, argumentos):
     payload += uuidEstadoHoy + '": "' + estadoHoy + '"'
     payloadFin = ' }'
 
-    if len(argumentos) == 1:
-        return None   # Sin argumentos
     if len(argumentos) == 2:
         payload += payloadFin
     if len(argumentos) == 3:

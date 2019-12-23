@@ -1,11 +1,22 @@
-- hosts: Clientes
+- hosts: Clientes, Servidores
 
   become: true
-
+  become_method: sudo
+  
   tasks:
 
-   - name: Instalación del archivo segun.py en el servidor
-     template:  
+   - name: Instalación del archivo segun.py en los clientes
+     template:         
        src: ~/Desarrollo/SegungoPy/CreaZk.py
        dest: /usr/local/bin/
        mode: '0755'
+
+   - name: Quita el anterior alias
+     shell: grep -v "alias zk" /home/{{ ansible_user }}/.zshrc >/tmp/z 
+
+   - name: Añade el nuevo alias
+     shell: echo "alias zk='python /usr/local/bin/CreaZk.py'" >> /tmp/z
+
+   - name: copia al fichero definitivo
+     shell: 
+       cmd : cp /tmp/z /home/{{ ansible_user }}/.zshrc

@@ -85,6 +85,10 @@ def postFiltroPorFecha(listShortId, elementId, fecha, groupby):
 def argumentosEntrada():
     prev = 1
     verbose = bool(0)
+
+    if len(args) == 1:
+        exit(2);
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", help="Más log", action="store_true")
     parser.add_argument("-p", "--previo", help="Dias previos para cambio de estado")
