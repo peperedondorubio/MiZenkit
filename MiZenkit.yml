@@ -1,4 +1,4 @@
-- hosts: Servidores
+- hosts: dino
 
   become: true
 

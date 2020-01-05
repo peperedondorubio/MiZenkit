@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/da.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pepe.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreaZk.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreaZk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreaZk.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CreaZk.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiZenkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MiZenkit.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/segun.py" beforeDir="false" afterPath="$PROJECT_DIR$/segun.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +46,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.CreaZk">
+  <component name="RunManager" selected="Python.da">
     <configuration name="CreaZk" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SegungoPy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -58,6 +60,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CreaZk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="da" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SegungoPy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/da.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.da" />
         <item itemvalue="Python.CreaZk" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.segun" />
@@ -136,6 +160,19 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="282" y="47" key="#Code_Folding" timestamp="1576520236411">
       <screen x="0" y="0" width="1366" height="768" />
@@ -149,29 +186,33 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="282" y="43" width="802" height="725" key="#Intentions/0.0.1366.768@0.0.1366.768" timestamp="1576577419296" />
+    <state x="451" y="177" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577301619759">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="451" y="177" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1577301619759" />
     <state x="470" y="143" key="FileChooserDialogImpl" timestamp="1576577238163">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="470" y="143" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1576577238163" />
-    <state width="1292" height="157" key="GridCell.Tab.0.bottom" timestamp="1577018509757">
-      <screen x="28" y="0" width="1338" height="768" />
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1577393553034">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="219" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1576839000297" />
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1577393553034" />
     <state width="1292" height="157" key="GridCell.Tab.0.bottom/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
-    <state width="1292" height="157" key="GridCell.Tab.0.center" timestamp="1577018509757">
-      <screen x="28" y="0" width="1338" height="768" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1577393553033">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="219" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1576839000296" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1577393553033" />
     <state width="1292" height="157" key="GridCell.Tab.0.center/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
-    <state width="1292" height="157" key="GridCell.Tab.0.left" timestamp="1577018509757">
-      <screen x="28" y="0" width="1338" height="768" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1577393553032">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="219" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1576839000296" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1577393553032" />
     <state width="1292" height="157" key="GridCell.Tab.0.left/28.0.1338.768@28.0.1338.768" timestamp="1577018509756" />
-    <state width="1292" height="157" key="GridCell.Tab.0.right" timestamp="1577018509757">
-      <screen x="28" y="0" width="1338" height="768" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1577393553033">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1320" height="219" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1576839000297" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1577393553033" />
     <state width="1292" height="157" key="GridCell.Tab.0.right/28.0.1338.768@28.0.1338.768" timestamp="1577018509757" />
     <state width="1320" height="219" key="GridCell.Tab.1.bottom" timestamp="1576839000298">
       <screen x="0" y="0" width="1366" height="768" />
@@ -198,10 +239,10 @@
     </state>
     <state x="335" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576932189138" />
     <state x="353" y="11" key="SettingsEditor/28.0.1338.768@28.0.1338.768" timestamp="1576935540130" />
-    <state x="379" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1577013530772">
-      <screen x="28" y="0" width="1338" height="768" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578218200476">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1576931763613" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1578218200476" />
     <state x="379" y="211" key="com.intellij.ide.util.TipDialog/28.0.1338.768@28.0.1338.768" timestamp="1577013530772" />
     <state x="351" y="7" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576583156383">
       <screen x="0" y="0" width="1366" height="768" />

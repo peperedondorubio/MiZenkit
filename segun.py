@@ -1,6 +1,7 @@
 import requests
 import json
 import argparse
+import sys
 from datetime import datetime, date, timedelta
 
 version = "1.1"
@@ -81,13 +82,9 @@ def postFiltroPorFecha(listShortId, elementId, fecha, groupby):
     else:
         return None
 
-
 def argumentosEntrada():
     prev = 1
     verbose = bool(0)
-
-    if len(args) == 1:
-        exit(2);
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", help="Más log", action="store_true")
@@ -101,7 +98,6 @@ def argumentosEntrada():
         verbose = bool(1)
 
     return [prev, verbose]
-
 
 ###################################################
 #### Inicio del programa
@@ -118,6 +114,7 @@ estadoHoy = "1190201"  # Estado por el que se cambia (Hoy)
 # Lista de parametros de entrada. Devuelve numero de dias previos de cambio de estado (opción -p)
 [previos, verbose] = argumentosEntrada()
 if previos == 0:
+    sys.stderr.write("Falla ArgumentosEntrada\n")
     exit(1)  # No debería pasar
 
 # Calcula el día de mañana
@@ -130,7 +127,7 @@ print("Fecha: " + str(datetime.now()))
 # Busco entradas con fecha anterior de mañana y que no esten Hecho o Cancelado o Archivado
 jsonFiltro = postFiltroPorFecha(listShortId, elementId, strMañana, EstadoId)
 if jsonFiltro is None:
-    print('Error en Filtro: ', jsonFiltro)
+    sys.stderr.write("Error en el filtro: \n" + jsonFiltro)
     exit(1)
 
 # Itero por las entradas encontradas y cambio su estado a Hoy
@@ -140,7 +137,7 @@ while iterador < elementos:
     elementId = str(jsonFiltro["listEntries"][iterador]['id'])
     retPut = putCambioEstado(listId, elementId, EstadoId, uuidEstado, estadoHoy)
     if retPut is None:
-        print('Error en Cambio de estado: ' + elementId)
+        sys.stderr.write('Error en Cambio de estado: ' + elementId)
         exit(1)
     print("--> " + jsonFiltro["listEntries"][iterador]['displayString'])
     iterador += 1
