@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2305627b-9ee9-4aca-9ba1-0b14e7072b23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/da.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/pepe.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiZenkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/MiZenkit.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/segun.py" beforeDir="false" afterPath="$PROJECT_DIR$/segun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreaZk.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreaZk.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,10 +235,10 @@
     </state>
     <state x="335" y="41" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1576932189138" />
     <state x="353" y="11" key="SettingsEditor/28.0.1338.768@28.0.1338.768" timestamp="1576935540130" />
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1578218200476">
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1579031586954">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1578218200476" />
+    <state x="358" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1579031586954" />
     <state x="379" y="211" key="com.intellij.ide.util.TipDialog/28.0.1338.768@28.0.1338.768" timestamp="1577013530772" />
     <state x="351" y="7" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576583156383">
       <screen x="0" y="0" width="1366" height="768" />
