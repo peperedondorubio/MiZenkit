@@ -4,7 +4,7 @@ import argparse
 import sys
 from datetime import datetime, date, timedelta
 
-version = "1.1"
+version = "1.2"
 urlbase = 'https://zenkit.com/api/v1/'
 cabecera = {'Content-Type': 'application/json',
             'Zenkit-API-Key': 'jffaf7ne-X1ELSpJZLdRlE5uAWIbWC47rJlna51h2'}
